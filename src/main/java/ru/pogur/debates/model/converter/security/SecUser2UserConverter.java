@@ -1,12 +1,12 @@
-package ru.pogur.debates.model.coverter;
+package ru.pogur.debates.model.converter.security;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-import ru.pogur.debates.model.SecRole;
-import ru.pogur.debates.model.SecUser;
-import ru.pogur.debates.utils.ListConverter;
+import ru.pogur.debates.auxiliary.ListConverter;
+import ru.pogur.debates.model.security.SecRole;
+import ru.pogur.debates.model.security.SecUser;
 
 /**
  * Created by dima-pc on 07.02.2016.

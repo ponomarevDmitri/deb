@@ -1,4 +1,4 @@
-package ru.pogur.debates.model;
+package ru.pogur.debates.model.security;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,6 +10,10 @@ import java.util.List;
 @Table(name = "sec_user")
 public class SecUser {
     private Long id;
+
+    private String firstName;
+    private String secondName;
+    private String thirdName;
 
     private String username;
     private String password;
@@ -23,6 +27,33 @@ public class SecUser {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Column
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Column
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    @Column
+    public String getThirdName() {
+        return thirdName;
+    }
+
+    public void setThirdName(String thirdName) {
+        this.thirdName = thirdName;
     }
 
     @Column

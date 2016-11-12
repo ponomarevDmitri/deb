@@ -53,34 +53,34 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // включаем защиту от CSRF атак
+        // РІРєР»СЋС‡Р°РµРј Р·Р°С‰РёС‚Сѓ РѕС‚ CSRF Р°С‚Р°Рє
         http.csrf()
                 .disable()
         ;
 
         http.formLogin()
-                // указываем страницу с формой логина
+                // СѓРєР°Р·С‹РІР°РµРј СЃС‚СЂР°РЅРёС†Сѓ СЃ С„РѕСЂРјРѕР№ Р»РѕРіРёРЅР°
                 .loginPage("/login")
-                        // указываем action с формы логина
+                        // СѓРєР°Р·С‹РІР°РµРј action СЃ С„РѕСЂРјС‹ Р»РѕРіРёРЅР°
                 .loginProcessingUrl("/j_spring_security_check")
-                        // указываем URL при неудачном логине
+                        // СѓРєР°Р·С‹РІР°РµРј URL РїСЂРё РЅРµСѓРґР°С‡РЅРѕРј Р»РѕРіРёРЅРµ
                 .failureUrl("/login?error")
                 .defaultSuccessUrl("/index")
 //                .successHandler(successHandler())
-                        // Указываем параметры логина и пароля с формы логина
+                        // РЈРєР°Р·С‹РІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ Р»РѕРіРёРЅР° Рё РїР°СЂРѕР»СЏ СЃ С„РѕСЂРјС‹ Р»РѕРіРёРЅР°
                 .usernameParameter("j_username")
                 .passwordParameter("j_password")
-                        // даем доступ к форме логина всем
+                        // РґР°РµРј РґРѕСЃС‚СѓРї Рє С„РѕСЂРјРµ Р»РѕРіРёРЅР° РІСЃРµРј
                 .permitAll();
 
         http.logout()
-                // разрешаем делать логаут всем
+                // СЂР°Р·СЂРµС€Р°РµРј РґРµР»Р°С‚СЊ Р»РѕРіР°СѓС‚ РІСЃРµРј
                 .permitAll()
-                        // указываем URL логаута
+                        // СѓРєР°Р·С‹РІР°РµРј URL Р»РѕРіР°СѓС‚Р°
                 .logoutUrl("/logout")
-                        // указываем URL при удачном логауте
+                        // СѓРєР°Р·С‹РІР°РµРј URL РїСЂРё СѓРґР°С‡РЅРѕРј Р»РѕРіР°СѓС‚Рµ
                 .logoutSuccessUrl("/login?logout")
-                        // делаем не валидной текущую сессию
+                        // РґРµР»Р°РµРј РЅРµ РІР°Р»РёРґРЅРѕР№ С‚РµРєСѓС‰СѓСЋ СЃРµСЃСЃРёСЋ
                 .invalidateHttpSession(true);
 
         http.authorizeRequests()
@@ -93,8 +93,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')");
     }
 
-    // Указываем Spring контейнеру, что надо инициализировать <b></b>ShaPasswordEncoder
-    // Это можно вынести в WebAppConfig, но для понимаемости оставил тут
+    // РЈРєР°Р·С‹РІР°РµРј Spring РєРѕРЅС‚РµР№РЅРµСЂСѓ, С‡С‚Рѕ РЅР°РґРѕ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ <b></b>ShaPasswordEncoder
+    // Р­С‚Рѕ РјРѕР¶РЅРѕ РІС‹РЅРµСЃС‚Рё РІ WebAppConfig, РЅРѕ РґР»СЏ РїРѕРЅРёРјР°РµРјРѕСЃС‚Рё РѕСЃС‚Р°РІРёР» С‚СѓС‚
 //    @Bean
 //    public ShaPasswordEncoder getShaPasswordEncoder() {
 //        return new ShaPasswordEncoder();

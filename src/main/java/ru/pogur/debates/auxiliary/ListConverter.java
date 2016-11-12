@@ -1,4 +1,4 @@
-package ru.pogur.debates.utils;
+package ru.pogur.debates.auxiliary;
 
 import org.springframework.core.convert.converter.Converter;
 

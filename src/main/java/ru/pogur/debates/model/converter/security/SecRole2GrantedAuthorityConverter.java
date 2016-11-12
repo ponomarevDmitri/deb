@@ -1,12 +1,12 @@
-package ru.pogur.debates.model.coverter;
+package ru.pogur.debates.model.converter.security;
 
 import com.sun.istack.internal.Nullable;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import ru.pogur.debates.model.SecRole;
-import ru.pogur.debates.utils.ListConverter;
+import ru.pogur.debates.auxiliary.ListConverter;
+import ru.pogur.debates.model.security.SecRole;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;

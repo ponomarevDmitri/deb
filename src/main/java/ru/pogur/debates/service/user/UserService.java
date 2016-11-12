@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
-import ru.pogur.debates.model.SecUser;
+import ru.pogur.debates.model.security.SecUser;
 import ru.pogur.debates.repository.ISecUserDao;
 
 /**

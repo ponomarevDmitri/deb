@@ -1,8 +1,7 @@
-package ru.pogur.debates.model.coverter;
-
+package ru.pogur.debates.model.converter.security;
 
 import ru.pogur.debates.dto.UserDto;
-import ru.pogur.debates.model.SecUser;
+import ru.pogur.debates.model.security.SecUser;
 
 /**
  * Created by dima-pc on 21.08.2016.

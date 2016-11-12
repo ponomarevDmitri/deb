@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan({"ru.analteam.gtracks.controller"})
+@ComponentScan({"ru.pogur.debates.controller"})
 public class WebConfig extends WebMvcConfigurerAdapter{
 
     @Override

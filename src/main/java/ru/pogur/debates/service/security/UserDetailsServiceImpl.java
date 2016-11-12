@@ -7,9 +7,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ru.pogur.debates.model.SecUser;
-import ru.pogur.debates.model.coverter.SecRole2GrantedAuthorityConverter;
-import ru.pogur.debates.model.coverter.SecUser2UserConverter;
+import ru.pogur.debates.model.converter.security.SecRole2GrantedAuthorityConverter;
+import ru.pogur.debates.model.converter.security.SecUser2UserConverter;
+import ru.pogur.debates.model.security.SecUser;
 import ru.pogur.debates.repository.SecUserDao;
 
 /**

@@ -1,4 +1,4 @@
-package ru.pogur.debates.model;
+package ru.pogur.debates.model.security;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

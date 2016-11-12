@@ -1,7 +1,7 @@
 package ru.pogur.debates.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.pogur.debates.model.SecUser;
+import ru.pogur.debates.model.security.SecUser;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
